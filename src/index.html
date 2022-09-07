@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New project</title>
+    <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.min.css">
+</head>
+<body>
+    <div class="content">
+        <div class="option">
+            <div class="option__contener-search">
+                <label class="option__search-label visually-hidden" for="search">Search</label>
+                <input class="option__search-input" type="text" id="search">
+            </div>
+            <div class="option__contener-select">
+                <select class="option__select" name="" id="filter">
+                    <option value="active">active</option>
+                    <option value="complete">complete</option>
+                </select>
+            </div>
+            <div class="option__contener-buttons">
+                <button class="option__btn option__btn--sort-old" id="sort-old" type="button" data-sort="sort-old"></button>
+                <button class="option__btn option__btn--sort-new" id="sort-new" type="button" data-sort="sort-new"></button>
+                <button class="option__btn option__btn--add" id='add-todo'type="button"></button>
+            </div>
+        </div>
+
+        <div class="contener-todo"></div>
+
+        <div class="popup-add hidden">
+            <div class="poppopup-add__content">
+                <h2 class="popup-add__title">Add a new task</h2>
+                <div class="popup-add__wrap">
+                    <div class="popup-add__item">
+                        <label class="popup-add__label" for="title">Title</label>
+                        <input class="popup-add__input" id="title" type="text">
+                    </div>
+                  
+                    <div class="popup-add__item">
+                        <label class="popup-add__label" for="description">Description</label>
+                        <textarea class="popup-add__textarea" name="" id="description" cols="30" rows="3"></textarea>
+                    </div>
+                    <div class="popup-add__wrap-btn">
+                        <button class="popup-add__btn" type="button" id="add" data-action="add">add</button>
+                        <button class="popup-add__btn" type="button" data-action="close">close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup-change hidden">
+            <div class="poppopup-change__content">
+                <h2 class="popup-change__title">Edit the current task</h2>
+                <div class="popup-change__wrap">
+                    <div class="popup-change__item">
+                        <label class="popup-change__label" for="popup-change-title">Title</label>
+                        <input class="popup-change__input" type="text" id="popup-change-title">
+                    </div>
+                    <div class="popup-change__item">
+                        <label class="popup-change__label" for="popup-change-description">Description</label>
+                        <textarea class="popup-change__textarea" name="" id="popup-change-description" cols="30" rows="3"></textarea>
+                    </div>
+                    <div class="popup-change__wrap-btn">
+                        <button class="popup-change__btn" type="button" data-action="save">save</button>
+                        <button class="popup-change__btn" type="button" data-action="close">close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="option-mobile">
+            <div>
+                <div class="option-mobile__wrap-btn">
+                    <button class="option-mobile__btn option-mobile__btn--up hidden" data-up="true" type="button" aria-label="up"></button>
+                </div>
+            </div>
+            <div class="option-mobile__box">
+                <div class="option-mobile__wrap-btn">
+                    <button class="option-mobile__btn option-mobile__btn--sort-old"  id="sort-old-mobile" type="button" data-sort="sort-old"  aria-label="sort tasks old"></button>
+                </div>
+                <div class="option-mobile__wrap-btn">
+                    <button class="option-mobile__btn option-mobile__btn--sort-new" id="sort-new-mobile" type="button" data-sort="sort-new"  aria-label="sort tasks new"></button>
+                </div>
+                <div class="option-mobile__wrap-btn">
+                    <button class="option-mobile__btn option-mobile__btn--sort-add" id="add-todo-mobile" type="button" aria-label="add new task"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <div class="up">
+        <button class="up__btn" type="button"  data-up="true" aria-label="up"></button>
+    </div>
+
+    <template id="template">
+        <div class="todo">
+           <h2 class="todo__title"></h2> 
+           <p class="todo__description"></p>
+           <div class="todo__wrapp">
+                <div class="todo__date"></div>
+                <div class="todo__options">
+                    <button class="todo__btn todo__btn--complete" type="button" data-action="complete" aria-label="complete"></button>
+                    <button class="todo__btn todo__btn--change" type="button" data-action="change" aria-label="change"></button>
+                    <button class="todo__btn todo__btn--remove" type="button" data-action="remove" aria-label="remove"></button>
+                </div>
+           </div>
+        </div>
+    </template>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>

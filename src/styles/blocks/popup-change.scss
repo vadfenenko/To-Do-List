@@ -1,0 +1,109 @@
+.poppopup-change__content{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#DC7453, #3F6298 , #0B9B1A);
+    z-index: 200;
+}
+
+.popup-change__title{
+    margin:  0 0 2rem 0;
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+    text-align: center;
+    text-decoration: underline;
+
+    @media(min-width: $mobile-width){
+        margin:  0 0 2.9rem 0;
+        font-size: 3.2rem;
+        line-height: 3.9rem;
+    }
+
+    @media(min-width: $tablet-width){
+        margin:  0 0 2.5rem 0;
+        font-size: 3.6rem;
+        line-height: 4.4rem;
+    }
+}
+
+.popup-change__wrap{
+    max-width: 27rem;
+    padding:  3rem 2rem;
+    background-color: white;
+    border-radius: 1rem;
+
+    @media(min-width: $mobile-width){
+        max-width: 32rem;
+        padding:  2.3rem 2rem;
+    }
+
+    @media(min-width: $tablet-width){
+        max-width: 38rem;
+        padding:  2.3rem 3rem;
+    }
+}
+
+.popup-change__item{
+    margin: 0 0 2rem 0;
+}
+
+.popup-change__item:first-child {
+    margin: 0 0 0.8rem 0;
+}
+
+.popup-change__label {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+
+.popup-change__input {
+    display: block;
+    width: 100%;
+    height: 3rem;
+    padding: 0 0.5rem;
+    border: 0.1rem grey solid;
+    border-radius: 0.3rem;
+}
+
+.popup-change__textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border: 0.1rem grey solid;
+    border-radius: 0.3rem;
+    resize: none;
+
+    @media(min-width: $tablet-width){
+        height: 9rem;
+    }
+}
+
+.popup-change__wrap-btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-change__btn {
+    flex-basis: 48%;
+    height: 3.1rem;
+    line-height: 1.9rem;
+    background-color: #000000;
+    border-radius: 0.3rem;
+    color: #ffffff; 
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        background-color: orange;
+        transition: all 0.3s ease 0s;
+    }
+}
+
+

@@ -1,0 +1,167 @@
+.todo{
+  padding: 1.5rem 1rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+
+  @media(min-width: $tablet-width){
+    padding: 1.5rem;
+  }
+
+  @media(min-width: $desktop-width){
+    padding: 2rem 1.5rem;
+  }
+}
+
+.todo:not(:last-child) {
+  margin: 0 0 2rem 0;
+
+  @media(min-width: $tablet-width){
+    margin: 0 0 3rem 0;
+  }
+
+  @media(min-width: $desktop-width){
+    margin: 0 0 4rem 0;
+  }
+}
+
+.todo__title{
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.2rem;
+  text-align: center;
+  word-wrap:break-word;
+
+  @media(min-width: $mobile-width){
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+  }
+}
+
+.todo__description{
+  margin: 0 0 1.5rem 0;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  word-wrap:break-word;
+
+  @media(min-width: $tablet-width){
+    margin: 0 0 1.8rem 0;
+  }
+  
+  @media(min-width: $desktop-width){
+    margin: 0 0 2rem 0;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+}
+
+.todo__wrapp{
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo__date{
+  margin: 1rem 0 0 0;
+  font-size: 1.2rem;
+
+  @media(min-width: $mobile-width){
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+
+  @media(min-width: $desktop-width){
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+}
+
+.todo__btn{
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  background-repeat: no-repeat;
+  background: transparent;
+  cursor: pointer;
+
+  @media(min-width: $mobile-width){
+    width: 3.5rem;
+    height: 3.5rem;
+    //border: 1px solid black;
+  }
+
+  &--complete::before{
+    content: "";
+    position: absolute;
+    left: 0.1rem;
+    top: 0.5rem;
+    width: 2.8rem;
+    height: 2rem;
+    background-image: url('../images/check_icon.svg');
+    background-size: 2.8rem 2rem;
+    background-repeat: no-repeat;
+
+    @media(min-width: $mobile-width){
+      top: 0.5rem;
+      left: 0;
+      width: 3.5rem;
+      height: 2.5rem;
+      background-size: 3.5rem 2.5rem
+    }
+  }
+
+  &--change::before{
+    content: "";
+    position: absolute;
+    left: 0.1rem;
+    top: 0.5rem;
+    width: 2.8rem;
+    height: 2rem;
+    background-image: url('../images/edit_icon.svg');
+    background-size: 2.8rem 2rem;
+    background-repeat: no-repeat;
+
+    @media(min-width: $mobile-width){
+      top: 0.5rem;
+      left: 0;
+      width: 3.5rem;
+      height: 2.5rem;
+      background-size: 3.5rem 2.5rem
+    }
+  }
+
+  &--remove::before{
+    content: "";
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    background-image: url('../images/close_icon.svg');
+    background-size: 2rem;
+    background-repeat: no-repeat;
+
+    @media(min-width: $mobile-width){
+      top: 0.5rem;
+      left: 0.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-size: 2.5rem 2.5rem
+    }
+  }
+}
+
+.todo__btn:not(:last-child){
+  margin: 0 2rem 0 0;
+
+  @media(min-width: $mobile-width){
+    margin: 0 2.5rem 0 0;
+  }
+}
+
+.js-complete .todo__title,
+.js-complete .todo__description{
+  opacity: 0.3;
+  text-decoration: line-through;
+}
+

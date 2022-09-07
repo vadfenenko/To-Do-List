@@ -1,0 +1,13 @@
+.content{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 0 4rem 0;
+
+    @media(min-width: $tablet-width){
+        max-width: 60rem;
+    }
+
+    @media(min-width: $desktop-width){
+        max-width: 90rem;
+    }
+}

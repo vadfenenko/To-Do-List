@@ -1,0 +1,223 @@
+.option{
+    display: flex;
+    max-width: 100%; //28rem
+    margin:  0 auto 1rem auto;
+    padding: 0.5rem;
+    background-color: #000000;
+    border-radius: 0.3rem;
+
+    @media(min-width: $mobile-width){
+        margin:  0 auto 2rem auto;
+        padding: 0.4rem;
+    }
+
+    @media(min-width: $tablet-width){
+        margin:  0 auto 3rem auto;
+        padding: 0.5rem;
+    }
+
+    @media(min-width: $desktop-width){
+        padding: 1.2rem;
+        border-radius: 1rem;
+    }
+}
+
+.option__contener-search{
+    position: relative;
+    width: 64.23076923076923%; //16.7rem / 26rem
+    margin: 0 1rem 0 0; 
+
+    @media(min-width: $tablet-width){
+        width: 30rem;
+        margin: 0 1.5rem 0 0;
+    }
+
+    @media(min-width: $desktop-width){
+        width: 46.5rem;
+        margin: 0 1.8rem 0 0;
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0.3rem;
+        left: 0.4rem;
+        width: 1.4rem;
+        height: 1.4rem;
+        background-image: url('../images/serch_icon.svg');
+        background-repeat: no-repeat;
+        background-size: 1.4rem;
+        z-index: 100;
+
+        @media(min-width: $mobile-width){
+            top: 0.4rem;
+            left: 0.5rem;
+            width: 1.8rem;
+            height: 1.8rem;
+            background-size: 1.8rem;
+        }
+
+        @media(min-width: $desktop-width){
+            top: 0.8rem;
+            left: 0.8rem;
+            width: 2.4rem;
+            height: 2.84rem;
+            background-size: 2.4rem;
+        }
+    }
+}
+
+.option__search-input{
+    display: block;
+    width: 100%;
+    height: 2rem;
+    padding: 0 0 0 2rem;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    border-radius: 0.3rem;
+    border:  none; 
+    
+    @media(min-width: $mobile-width){
+        height: 2.6rem;
+        padding: 0 0 0 2.5rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+
+    @media(min-width: $tablet-width){
+        height: 3rem;
+    }
+
+    @media(min-width: $desktop-width){
+        height: 4rem;
+        padding: 0 0 0 3.8rem;
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+}
+
+.option__contener-select{
+    width: 35.76923076923077%; //9.3rem / 26rem 
+
+    @media(min-width: $tablet-width){
+        width: 13.9rem;
+        margin: 0 1.5rem 0 0;
+    }
+
+    @media(min-width: $desktop-width){
+        width: 20.5rem;
+        margin: 0 1.8rem 0 0;
+    }
+}
+
+.option__select{
+    display: block;
+    width: 100%;
+    height: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-align: center;
+    border-radius: 0.3rem;
+    border:  none;
+    cursor: pointer;
+
+    @media(min-width: $mobile-width){
+        height: 2.6rem;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+
+    @media(min-width: $tablet-width){
+        height: 3rem;
+    }
+
+    @media(min-width: $desktop-width){
+        height: 4rem;
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+}
+
+.option__contener-buttons{
+    display: none;
+
+    @media(min-width: $tablet-width){
+        display: flex;
+    }
+}
+
+.option__btn{
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    @media(min-width: $desktop-width){
+        width: 4rem;
+        height: 4rem;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0.3rem;
+        left: 0.8rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        background-repeat: no-repeat;
+        background-size: 1.4rem 2.4rem;
+
+        @media(min-width: $desktop-width){
+            top: 0.7rem;
+            left: 1.3rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-size: 1.4rem 2.4rem;
+        }
+    }
+
+    &--sort-old::before {
+        background-image: url('../images/sort-old_icon.svg');
+    }
+
+    &--sort-new::before {
+        background-image: url('../images/sort-new_icon.svg');
+    }
+
+    &--add::before {
+        content: "";
+        position: absolute;
+        top: 0.3rem;
+        left: 0.3rem;
+        width: 2.4rem;
+        height: 2.4rem;
+        background-image: url('../images/add_icon.svg');
+        background-size: 2.4rem;
+
+        @media(min-width: $desktop-width){
+            top: 0.7rem;
+            left: 0.7rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            background-size: 2.5rem;
+        }
+    }
+
+    &:hover {
+        background-color: orange;
+        transition: all 0.3s ease 0s;
+    }
+}
+
+.option__btn:not(:last-child){
+    margin: 0 1.5rem 0 0;
+
+    @media(min-width: $desktop-width){
+        margin: 0 2.5rem 0 0;
+    }
+}

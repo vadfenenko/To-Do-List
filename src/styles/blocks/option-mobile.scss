@@ -1,0 +1,88 @@
+.option-mobile{
+    @media(min-width: $tablet-width){
+        display: none;
+    }
+}
+
+@media(max-width: $mobile-width-only){
+
+.option-mobile {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    padding: .5rem 2rem;
+    justify-content: space-between;
+    background-color: #000000;
+}
+
+.option-mobile__box{
+    display: flex;
+}
+
+.option-mobile__wrap-btn:not(:last-child) {
+    margin: 0 2rem 0 0;
+}
+
+.option-mobile__btn {
+    position: relative;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        background-color: orange;
+        transition: all 0.3s ease 0s;
+    }
+
+    &--sort-old::before {
+        content: "";
+        position: absolute;
+        top: 0.4rem;
+        left: 0.8rem;
+        width: 1.5rem;
+        height: 2.2rem;
+        background-image: url('../images/sort-old_icon.svg');
+        background-repeat: no-repeat;
+    }
+    
+    &--sort-new::before {
+        content: "";
+        position: absolute;
+        top: 0.4rem;
+        left: 0.8rem;
+        width: 1.5rem;
+        height: 2.2rem;
+        background-image: url('../images/sort-new_icon.svg');
+        background-repeat: no-repeat;
+    }
+
+    &--sort-add::before {
+        content: "";
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        width: 2rem;
+        height: 2rem;
+        background-image: url('../images/add_icon.svg');
+        background-repeat: no-repeat;
+    }
+
+    &--up::before {
+        content: "";
+        position: absolute;
+        top: 0.7rem;
+        left: 0.8rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-image: url('../images/top_icon.svg');
+        background-repeat: no-repeat;
+    }
+}
+
+}
